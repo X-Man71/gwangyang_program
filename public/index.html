@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NBA PORTAL</title>
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="top">
+        <div class="logo">
+            NBA <span>PORTAL</span>
+        </div>
+
+        <div class="api-status">
+            <span id="statusDot"></span>
+            API CONNECTED
+        </div>
+    </div>
+</header>
+
+<nav>
+    <div class="nav-inner">
+        <a href="#home">홈</a>
+        <a href="#leaders">리더</a>
+        <a href="#advanced">고급 통계</a>
+        <a href="#players">선수</a>
+    </div>
+</nav>
+
+<main>
+
+<section class="hero" id="home">
+
+    <div>
+        <div class="eyebrow">
+            NATIONAL BASKETBALL ASSOCIATION
+        </div>
+
+        <h1>
+            NBA<br>
+            PORTAL
+        </h1>
+
+        <p>
+            NBA 선수 기록과 통계를 한눈에
+        </p>
+    </div>
+
+    <div class="ball">
+        🏀
+    </div>
+
+</section>
+
+
+<section id="leaders">
+
+    <div class="section-title">
+        <span>PLAYER LEADERS</span>
+        <h2>주요 선수 기록</h2>
+    </div>
+
+    <div class="leader-grid">
+
+        <div class="leader-card">
+            <h3>🔥 득점</h3>
+            <div id="scorers">Loading...</div>
+        </div>
+
+        <div class="leader-card">
+            <h3>🎯 어시스트</h3>
+            <div id="assists">Loading...</div>
+        </div>
+
+        <div class="leader-card">
+            <h3>💪 리바운드</h3>
+            <div id="rebounds">Loading...</div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="advanced">
+
+    <div class="section-title">
+        <span>ADVANCED STATS</span>
+        <h2>고급 통계</h2>
+    </div>
+
+    <div class="table-wrapper">
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>선수</th>
+                    <th>팀</th>
+                    <th>PER</th>
+                    <th>TS%</th>
+                    <th>USG%</th>
+                </tr>
+            </thead>
+
+            <tbody id="advancedTable">
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+<section id="players">
+
+    <div class="section-title">
+        <span>PLAYER STATS</span>
+        <h2>선수 통계</h2>
+    </div>
+
+    <div class="controls">
+
+        <select id="statSelect">
+            <option value="points">득점</option>
+            <option value="assists">어시스트</option>
+            <option value="rebounds">리바운드</option>
+            <option value="steals">스틸</option>
+            <option value="blocks">블록</option>
+        </select>
+
+        <button onclick="loadPlayers()">
+            조회
+        </button>
+
+    </div>
+
+    <div id="playersGrid" class="players-grid">
+        Loading...
+    </div>
+
+</section>
+
+</main>
+
+<footer>
+    <strong>NBA PORTAL</strong>
+    <p>NBA statistics portal</p>
+</footer>
+
+<script src="/app.js"></script>
+
+</body>
+</html>
